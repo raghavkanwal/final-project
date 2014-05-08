@@ -1,0 +1,7 @@
+<%= form_for (@bill) do |f| %>
+  <div class="field">
+     Amount : <%= f.text_field :amount%>Name :<%= f.text_field :bill_for %>
+  </div>
+
+  <%= f.submit "Post"%>
+<% end %>

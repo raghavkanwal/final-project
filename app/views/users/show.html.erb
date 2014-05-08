@@ -1,0 +1,26 @@
+<br/><%=@user.email%>
+
+<h3>Bills (<%= @user.bills.count %>)</h3>
+<% if @user.bills.any? %>
+      <ol class="bills">
+      <% @user.bills.each do |b|%>
+      <li><%=b.for%> owes you Rs. <%=b.amount%> </li>
+      <% end %>
+      </ol>
+<% end %>
+
+    <%= link_to "Add New Bill", new_bill_path %>
+
+<!--
+<h3>Debts (<%= @user.debts.count %>)</h3>
+<% if @user.debts.any? %>
+      <ol class="debts">
+      <% @user.debts.each do |b|%>
+      <li>You owe <%=b.to%> Rs. <%=b.amount%> </li> 
+      <% end %>
+      </ol>
+<% end %>
+
+ <%= link_to "Add New Debt", new_debt_path %>
+ -->
+ 
